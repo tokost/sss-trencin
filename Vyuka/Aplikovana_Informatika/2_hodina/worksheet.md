@@ -364,5 +364,3 @@ You can also add custom CSS to your MarkDown to add additional styling to your d
 - [Daring Fireball Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
 - [MarkDown in Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
 
-Puznámka:
-    <p>Tento súbor je ako html formát čitatelný aj v internetovom prehliadači je ho však treba najprv do tohoto formatu konvertovat.,  Odkazy na kapitoly avšak tam funkčné nie sú lebo v html sa tento problem riesi inak</p>
