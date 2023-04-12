@@ -1,2 +1,0 @@
-
-![](pravdivostná-tabulka.jpg)
