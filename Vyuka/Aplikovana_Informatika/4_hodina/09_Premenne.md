@@ -20,7 +20,7 @@ Každá hodnota v Pythonu je určitého datového typu. Do premennej sa dajú uk
 >>> x = a
 ~~~
 To v pamäti Pythonu bude vyzerať nejako takto:
-![](Pamat_premennych01.png)
+![](./Tahaky_dokumenty_obrazky/Pamat_premennych01.png)
 * Vidíme, že priradenie do jednej premennej nejakej inej premennej (napr. x = a) neznamená referenciu na meno ale na jej hodnotu 
 * najprv sa zistí hodnota na pravej strane príkazu a až potom sa spraví referencovanie (priradenie) do premennej na ľavej strane
 V ďalšom príklade vidíme, ako to funguje, keď vo výraze na pravej strane (kde je priraďovaná hodnota) sa nachádza tá istá premenná, ako na ľavej strane (teda kam priraďujeme):
@@ -29,11 +29,11 @@ V ďalšom príklade vidíme, ako to funguje, keď vo výraze na pravej strane (
 >>> ab = ab + 7
 ~~~
 1. najprv má ab hodnotu 13
-![](Pamat_premennych02.png)
+![](./Tahaky_dokumenty_obrazky/Pamat_premennych02.png)
 2. potom sa vypočíta nová hodnota 20 (ako súčet ab + 7)
-![](Pamat_premennych03.png)
+![](./Tahaky_dokumenty_obrazky/Pamat_premennych03.png)
 3. do premennej ab sa priradí nová hodnota
-![](Pamat_premennych04.png)
+![](./Tahaky_dokumenty_obrazky/Pamat_premennych04.png)
 
 ## Meno premennej 
 * môže obsahovať písmená, číslice a znak podčiarkovník

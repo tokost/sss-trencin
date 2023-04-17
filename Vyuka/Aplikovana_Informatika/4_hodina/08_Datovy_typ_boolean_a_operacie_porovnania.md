@@ -37,7 +37,7 @@ False
 >>>
 ~~~
 ## Operátory porovnávania 
-![](Porovnavacie_operatory.png)
+![](./Tahaky_dokumenty_obrazky/Porovnavacie_operatory.png)
 Tu je niekoľko príkladov použitia týchto operátorov:
 ~~~
 >>> 1 == 1

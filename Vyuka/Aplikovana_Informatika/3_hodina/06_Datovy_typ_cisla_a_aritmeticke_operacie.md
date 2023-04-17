@@ -152,7 +152,7 @@ Existujú tri odlišné typy čísel: celé čísla , čísla s pohyblivou rádo
 >>>
 ~~~
 Všetky číselné typy (okrem komplexných) podporujú nasledujúce operácie :
-![](Operacie_s_cislami.png)
+![](./Tahaky_dokumenty_obrazky/Operacie_s_cislami.png)
 Poznámky:
 
    1.&emsp; &nbsp;Označuje sa tiež ako celočíselné delenie. Výsledná hodnota je celé celé číslo, hoci typ výsledku nemusí byť nevyhnutne int. Výsledok je vždy zaokrúhlený smerom k mínus nekonečnu: 1//2 je 0, (-1)//2 je -1, 1//(-2)je -1, a (-1)//(-2) je 0.
@@ -220,7 +220,7 @@ print('a // b =', c) # 1
 ~~~
 Ak sa pri operáciách operátor nachádza medzi svojimi operandami hovoríme i tzv. **infixovom zápise**. Hovoríme o tom preto lebo pri programovaní sa často používa zápis, kedy sa operátor vkladá pred operandy. Vtedy hovoríme o tzv. **prefixovom zápise**. Pre úplnosť treba spomenú že ešte sa možeme stretnúť s tzv. **postfixovým zápisom** kedy sa operátor vkladá za operandy. Názorne to môžeme vidieť v nasledujúcej tabuľke:
 
-![](Kombinacie_zapisov_operacii.png)
+![](./Tahaky_dokumenty_obrazky/Kombinacie_zapisov_operacii.png)
 
 ~~~
 >>> x=0

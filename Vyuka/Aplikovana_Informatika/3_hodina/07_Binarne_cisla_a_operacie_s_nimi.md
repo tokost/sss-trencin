@@ -7,7 +7,8 @@ https://www.youtube.com/watch?v=Dkh0nFoEwLs
  http://www.spslevice.sk/ucebnice/SOC/SOC%20-%20PRI/66-Zakladne_logicke_funkcie.htm 
  
  Medzi binárnimi číslami platia nie len aritmetické operácie (+, -, *, / atď. ) ale aj tzv. operácie logické. Výsledok logických operácií dvoch čísiel ktoré sú vyjadrené v binárnom tvare potom závisí od použitej logickej funkcie:
-![](pravdivostna-tabulka.jpg)
+
+![](./Tahaky_dokumenty_obrazky/pravdivostna-tabulka.jpg)
 
 https://portal.matematickabiologie.cz/index.php?pg=zaklady-informatiky-pro-biology--teoreticke-zaklady-informatiky--teorie-cisel--dvojkovy-doplnek 
 
@@ -23,7 +24,7 @@ Všetky priority binárnych bitových operácií sú nižšie ako numerické ope
 
 V tejto tabuľke sú uvedené operátory ktoré sa používajú v Pythone pre jednotlivé logické funkcie zoradené podľa vzostupnej priority:
 
-![](Bitove_operacie.png)
+![](./Tahaky_dokumenty_obrazky/Bitove_operacie.png)
 
 Poznámky:
 

@@ -115,7 +115,7 @@ Keď chceme označiť časť reťazca použijeme na to tzv. rez. Tento postup sa
 > * Prvý znak má index 0, druhý 1 atď.
 > * Posledny označujeme číslom -1, predposledný -2 atď.
 
-![](indexovanie_retazca.png)
+![](./Tahaky_dokumenty_obrazky/indexovanie_retazca.png)
 
 Obrázok indexovania reťazca '12345' a vytvorenie rezov (slice)
 
@@ -144,7 +144,7 @@ Slice tiež používa hranaté zátvorky aj vtedy keď vo vnútri nie je jeden i
 '12345'
 ~~~
 
-![](indexovanie_retazca01.png)
+![](./Tahaky_dokumenty_obrazky/indexovanie_retazca01.png)
 Obrázok indexovania reťazca 'Monty Python' a vytvorenie rezov (slice)
 ~~~
 >>> abc = 'Monty Python'
@@ -173,7 +173,7 @@ IndexError: string index out of range
 'on'
 ~~~
 Index pred ako aj index za dvojbodkou sa môže v slice vynechat. Potom výber začína od začiatku, resp. pokračuje do konca. V extrémnom prípade, kdy se vynechajú oba indexy, tak sa vyberie všetko. V takýchto prípadoch používame tzv. **predvolené hodnoty**
-![](indexovanie_retazca03.png)
+![](./Tahaky_dokumenty_obrazky/indexovanie_retazca03.png)
 ~~~
 >>> abc = 'Monty Python'
 >>> abc[6:]                  # od 6. znaku do konca
@@ -218,7 +218,7 @@ Pri indexoch podreťazca môžeme určiť aj krok indexov kde krok určuje o ko�
 
 ## Operácia záporného indexovania
 Často potrebujeme pristupovať ku znakom na konci reťazca an čo využívame zapisovanie pomocou záporných indexov:
-![](indexovanie_retazca02.png)
+![](./Tahaky_dokumenty_obrazky/indexovanie_retazca02.png)
 Obrázok záporného indexovania reťazca 'Monty Python' a vytvorenie rezov (slice)
 
 Znaky reťazca sú indexované od -1 do -len() a napr. pre 5-ty index nášho príkladu platí že abc[-5] == abc[len(abc)-5]
