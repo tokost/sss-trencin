@@ -364,3 +364,5 @@ You can also add custom CSS to your MarkDown to add additional styling to your d
 - [Daring Fireball Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
 - [MarkDown in Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
 
+[SPÄŤ](../04_Praca_s_Markdown_subormi.md)
+

@@ -25,6 +25,9 @@ $ git status    # zistenie stavu suborov
 $ git add .     # priprava suborov ktore maju byt ulozene do archivu 
 $ git commit -m "komentar k ukladanym suborom"  # ulozenie suborov do archivu   
 ~~~
+
+![](Git_a_GitHub_workflow02.png)
+
 [Webová adresa inštalačného súboru Git](https://git-scm.com/)
 
 Táto informácia je však určená pre individuálnu inštaláciu Git-u na súkromné zariadenia, nakoľko na školských zariadeniach je Git už nainštalovaný. Súbor z uvedenej stránky je potrebné si stiahnuť do určeného zariadenia a nasledne ho spustiť.

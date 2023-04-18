@@ -77,4 +77,4 @@ SOFTWARE.
 - Twitter - [@jamesqquick](https://twitter.com/jamesqquick)
 - Website - [James Q Quick](https://jamesqquick.com)
 
-[Back To The Top](#read-me-template))
+[SPÄŤ](../04_Praca_s_Markdown_subormi.md)

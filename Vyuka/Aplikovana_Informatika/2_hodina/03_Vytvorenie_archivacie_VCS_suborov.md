@@ -1,25 +1,21 @@
 > *[Preco Git a GitHub](./Tahaky_dokumenty_obrazky/Git_GitHub/Preco_git.md)*
 
-A to je dôvod k tomu aby sme do našej prípravy zabudovali prácu s archivačným systémom, ktorý námnaviac umožní aj preberanie pracovných podkladov a spravovanie verzii našich vyplodov. Pre tieto účeli si zolime programou aplikaciu Gir resp. GitHub ktorá bude akousi nadstavbou alebo prekrytím vyšsie zobrazených počítačových štruktúr. 
+A to je dôvod k tomu aby sme do našej prípravy zabudovali prácu s archivačným systémom, ktorý námnaviac umožní aj preberanie pracovných podkladov a spravovanie verzii našich vyplodov. Pre tieto účeli si zolime programovú aplikaciu Gir resp. GitHub ktorá bude akousi nadstavbou alebo prekrytím vyšsie zobrazených počítačových štruktúr. 
 
 ![](./Tahaky_dokumenty_obrazky/DVCS_git.png)
 
 
-Implemntácia archivačného a VCS (Version Control Systems) systému dopĺňa iba softwareovú časť našej siete a zapája ju týmto súčasne do siete celosvetovej ako je to vidieť na tomto obrázku: 
 
-![](./Tahaky_dokumenty_obrazky/Git_v_sieti.png)
 
 Práca v tejto sieti sa dá názorne zobraziť aj takto":
 
-![](./Tahaky_dokumenty_obrazky/Git_a_GitHub_workflow03.png)
+![](./Tahaky_dokumenty_obrazky/git_a_github_siet.png)
 
 Predmetom tejto časti bude okrem inštalácie a nastavéní týchto programových prostriedkov aj zoznámenie sa ako s nimi pracovať aby sme vedeli uskutočňovať naše zámery. Na tomto mieste si jednotlivé činnosti iba názorne predstavíme a v ďalšom sa im budeme venovať podrobnejšie.
 
-![](./Tahaky_dokumenty_obrazky/git_a_github_siet.png)
+![](./Tahaky_dokumenty_obrazky/Git_a_GitHub_workflow03.png)
 
-![](./Tahaky_dokumenty_obrazky/Git_a_GitHub_workflow02.png)
 
-![](./Tahaky_dokumenty_obrazky/Git_a_GitHub_workflow.png)
 
 > *[Príprava a používanie Git-u a GitHub-](./Tahaky_dokumenty_obrazky/Git_GitHub/Priprava_pouzivanie_git.md)*
 
@@ -55,3 +51,9 @@ $ git remote    # zistenie existujucich aliasov na GitHub-e
 $ git pull meno_aliasu-gh main # stiahnutie suborov z GitHub-u
 $ git push meno_aliasu-gh main # vlozenie suborov na GitHub
 ~~~
+![](./Tahaky_dokumenty_obrazky/Git_a_GitHub_workflow.png)
+
+[Názorné video čo sa deje pri používaní základných príkazov](https://www.youtube.com/watch?v=UGkT8w91qXQ)
+
+[Vysvetlivky niektorých základných termínov](Tahaky_dokumenty_obrazky/Git_GitHub/Vysvetlivky_terminov.md)
+

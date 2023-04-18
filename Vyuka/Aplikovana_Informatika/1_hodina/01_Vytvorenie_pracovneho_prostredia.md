@@ -61,6 +61,6 @@ je interpreter  príkazového riadku OS Windows t.j. program ktorý je používa
 je integrované vývojové a učiace prostredie ako napr. Mu, Thonny a pod.\
 Stiahnutie a inštalácia SW: https://thonny.org/ 
 
-**iv. IDE (I**ntegrated **D**evelopment **E**nvironment**
+**iv. IDE (I**ntegrated **D**evelopment **E**nvironment
 
-je integrované vývojové prostredie pre profesionálne použitie) ako napr. [VS-Code](02_Instalacia_a_konfiguracia_VS-code.md), PyCharm atď.
+je integrované vývojové prostredie pre profesionálne použitie ako napr. Visual Studio Code, PyCharm atď. My budeme pre našu prácu používať [VS-Code](02_Instalacia_a_konfiguracia_VS-code.md) ktorý si v ďalšom nainštalujeme, do ktorého doplníme rožšírenia (EXTENSIONS) a ktoré si nakonfigurujeme.
