@@ -1,7 +1,7 @@
 > ## Príprava a používania Git-u
 Pri vytváraní a používaní lokálneho uložiska Git-u pre účely výuky je potrebné dodržiavať nasledovné pokyny:
 * pokiaľ to nebude vykonané namapuje si adresár **//meno_servera/sss-ai** a označíme ho písmenom S: viď. [namapovanie adresára vo Win 10](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d )  
-* následne si každý pomocou suborového prehliadača na sieťovom disku v časti označenčenej **S:** vytvorí svoj vlastný pracovný adresár s názvom **priezvisko_meno-it** na základe čoho by mala vzniknúť nasledovná cesta S:\priezvisko_meno-it (resp. v git-e shell s/priezvisko_meno-it)
+* následne si každý pomocou suborového prehliadača na sieťovom disku v časti označenčenej **S:** vytvorí svoj vlastný pracovný adresár s názvom **priezvisko_meno-it_rocnik** na základe čoho by mala vzniknúť nasledovná cesta S:\priezvisko_meno-it_1 (resp. v git-e shell s/priezvisko_meno-it_1)
 * do tohoto adresára sa nastavíme pomocou Git shellu vo VS-Code príkazmi :
 ~~~
     $ cd s:, $ cd oznacenie_disku:, $ cd meno_adresara , $ cd .. a pod.

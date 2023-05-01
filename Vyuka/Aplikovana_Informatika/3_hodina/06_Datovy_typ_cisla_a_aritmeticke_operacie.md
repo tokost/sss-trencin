@@ -1,3 +1,4 @@
+# Dátový typ čísla a aritmetické operácie s nimi
 Na rozdiel od mnohých iných jazykov, ktoré sú kompilačné (napr. Pascal, C/C++, C#) je Python interpreter. To znamená, že interpreter nevytvára spustiteľný kód (napr. .exe súbor vo Windows)
 na spustenie programu musí byť v počítači nainštalovaný Python interpreter umožňuje aj interaktívnu prácu s prostredím.
 ## Interaktívny režim¶

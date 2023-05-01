@@ -1,5 +1,4 @@
 # Premenné a operácie s premennými
-
 O premenným môžeme hovoriť ako o rezervovaní miesta v pamäti na ukladanie hodnôt. 
 * premenná sa vytvorí priraďovacím príkazom (ak ešte doteraz neexistovala). Hodnoty sa teda pripisujú pomocou „=“, kde na ľavej strane sa nachádza názov premennej a napravo hodnota ktorú jej priraďuejme:
 >zapisujeme to :&emsp; &nbsp; **premenná = hodnota**

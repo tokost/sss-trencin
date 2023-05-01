@@ -1,3 +1,4 @@
+# Dátový typ reťazec a operácie s nimi
 Reťazec (string) – je postupnosť znakov uzavretá v apostrofoch ' ' alebo uvodzovkách " ". 
 > **Bližšie sa o znakoch a ich kódoch dozvieme z ťaháku "21_znaky_kody.pdf"**
  

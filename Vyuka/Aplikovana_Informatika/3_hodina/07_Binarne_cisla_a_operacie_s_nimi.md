@@ -1,3 +1,4 @@
+# Dátový binárne čísla a operácie s nimi
 Binárne čisla sú podtypom celých čísel a preto aj bitové operácie majú zmysel len pre celé čísla. Binárne čisla predstavujú kombináciu nul a jednotiek pričom prvý bit je vnímaný ako znamienkový (1 sa rovna - a 0 sa rovná +). Vznikajú prevodom na základe dohodnutého kódu a je k tomu možné použiť aj rôzne internetovské konvertory.
 https://www.justfreetools.com/sk/decimal-to-binary-converter 
  Binárne čísla majú výnimočné postavenie najmä v automatizačnej technike a na tejto báze pracuje nie len kodovanie desiatkových čísiel, ale aj textových, grafikých, zvukových a video informácii do tvaru ktorému počitač rozumie a s ktorým vie pracovať.
