@@ -1,3 +1,5 @@
+# Menitelnosť a nemenitelnosť dátových typov
+
 Udajové typy rozlišujeme aj podla toho, či ich hodnoty môžeme měnit apodľa toho poznáme:
 
 * **nemenitelné (immutable)** typy ku ktorým patrí int, float, bool, str, tuple.

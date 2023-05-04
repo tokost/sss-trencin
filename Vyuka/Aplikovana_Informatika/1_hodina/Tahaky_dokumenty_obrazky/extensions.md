@@ -34,6 +34,7 @@
     * SQLite
     * vscode-icons
     * Word Count
+    * Vscode Google Translate
 
 > Pridanie nových rozšírení
 
