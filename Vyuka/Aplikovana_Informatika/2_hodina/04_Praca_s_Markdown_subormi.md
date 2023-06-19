@@ -16,4 +16,6 @@ Jazykom **Markdown** ktorý je aj súčasťou VS-Code sú vytvárané aj všetky
 
 [VZOR Dokument pisaný v jazyku Markdown v anglickom jazyku](./Tahaky_dokumenty_obrazky/worksheet_README.md)
 
+[Jednoduché formátovanie súborov Markdown v kóde VS-Code](https://hackernoon.com/easily-formatting-markdown-files-in-vs-code)
+
 

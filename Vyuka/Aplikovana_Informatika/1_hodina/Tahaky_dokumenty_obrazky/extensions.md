@@ -34,7 +34,10 @@
     * SQLite
     * vscode-icons
     * Word Count
+  
     * Vscode Google Translate
+    * Slovak Support for LanguageTool
+
 
 > Pridanie nových rozšírení
 

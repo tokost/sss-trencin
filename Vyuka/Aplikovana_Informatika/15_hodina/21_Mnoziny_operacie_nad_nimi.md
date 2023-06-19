@@ -1,23 +1,47 @@
 # Množiny (set)
-Množina alebo set je druh kolekcie **immutable** ktorá opäť vychádza zo zoznamu s tým rozdielom, že môže obsahovať iba unikátné položky t.j. **každá položka môže byť v množine iba jeden krát**. Tým že táto vlastosť zodpovedá matematickéj definicii množiny vznikol dôvod aby táto kolekcia aj v Pythone dostala názov množiny. Ak hovoríme že **položky nie sú zotriedené** - neusporiadané, znamená to to, že položka bude pridaná svojvolne na ľubovolné miesto do množiny a výraz **neopakujúce sa** znamená, že ak zadáme príkaz na pridanie hodnoty do množiny, bude táto hodnota vložená do množiny, len vtedy ak sa v nej ešte nevyskytuje. 
+Množiny sa používajú na uloženie viacerých položiek do jednej premennej. Set je kolekcia, ktorá je neusporiadaná , nemeniteľná t.j. neindexovaná a iterovatelná. Je to druh kolekcie ktorá opäť vychádza zo zoznamu (list) s tým rozdielom, že môže obsahovať iba unikátné (neopakujúce sa) položky t.j. **každá položka môže byť v množine zastúpená iba jeden krát**. Hlavnou výhodou použitia množiny na rozdiel od zoznamu je to, že má vysoko optimalizovanú metódu na kontrolu, **či je v množine obsiahnutý konkrétny prvok ktorý nás zaujíma**.Kedže táto vlastosť zodpovedá matematickéj definicii množiny, tak táto kolekcia aj v Pythone dostala názov množiny. V súvislosti so set-om tiež hovoríme že **položky nie sú zotriedené** - sú neusporiadané, čo znamená to, že položka bude pridaná svojvolne na ľubovolné miesto do množiny a položky nemajú definované poradie t.j. nie sú indexované a teda nie je možné na ne odkazovať podľa indexu alebo definovaného kľuča. Pojem **immutable** resp. nemenné znamená, že po ich vytvorení ich už nemôžeme meniť. Môžeme ich však zmazať alebo pridať ako nové v požadovanej podobe. Výraz **neopakujúce sa** zase znamená, že ak zadáme príkaz na pridanie hodnoty do množiny, bude táto hodnota vložená do množiny, len vtedy ak sa v nej ešte nevyskytuje. Pojem **iterovatelnosti** znamená že môžeme prechádzať prvkami kolekcie pomocou cyklu (napr. for a pod). Cyklami sa budeme zaoberať neskôr avšak na tomto mieste uvedieme kvôli názornosti iba malú ukážku:
 ~~~
-a_set = {1}     ①
-print(a_set)
+pole = [2, 3, 5, 7, 11, 13, 17]
+for i in pole:
+    print(i, i*i)
+~~~
 
+
+Množinu môžeme vytvoriť aj manuálne a to tak že nejakej premennej ktorej dáme napr. názov a_set priradíme hodnoty ktoré sú v zložených zátvorkách oddelené čiarkami.
+~~~
+a_set = {1}         #   ①
+print(a_set)
 {1}
-type(a_set)     ②
+
+print(type(a_set))  #   ②
 <class 'set'>
 
-a_set = {1, 2}  ③
+a_set = {1, 'Stevo', 10.5, True}      #   ③
 print(a_set)
+{1, 'Stevo', 10.5, True}
 
-{1, 2}
+nums = {1, 2, 2, 3, 4, 4, 5, 5}
+print(nums) 
+{1, 2, 3, 4, 5}
+
+
 ~~~
-①	Zápis množiny keď chceme vytvoriť množinu s jednou hodnotou. Vtedy uzatvoríme túto hodnotu do zložených zátvoriek {}.
-②	Množiny sú v skutočnosti implementované ako triedy, ale týmto sa teraz nebudeme zatažovať.
-③	Ak chceme vytvoriť množinu s viacerými hodnotami, oddelíme hodnoty čiarkami a všetko uzatvoríme do zložených zátvoriek.
+①	Zápis množiny keď chceme vytvoriť množinu s jednou hodnotou. Vtedy uzatvoríme túto hodnotu do zložených zátvoriek { }.
+②	Množiny sú v skutočnosti implementované ako triedy, ale týmto sa teraz zaoberať nebudeme.
+③	Ak chceme vytvoriť množinu s viacerými hodnotami, oddelíme hodnoty čiarkami a všetko uzatvoríme do zložených zátvoriek. Pritom možno použiť aj rôzne údajové typy.
 
-Pre množiny **neexistuje žiadná zvláštna syntax** ako to bolo v prípade zoznamov či n-tic, vytvárame ich jednoducho použitím globálnej funkcie set(), ktorej môžeme napr. prostredníctvom  parametra funkcie add priložiť novú hodnotu:
+Súčasťou vytvoreného objektu môžu byť iba nemenné (a hašovateľné) prvky. Čísla (celé čísla, pohyblivé čísla, ako aj komplexné), reťazce a objekty tuple sú akceptované, ale objekty množiny, zoznamu a slovníka nie. Aj keď meniteľné prvky nemôžu byť uložené v množine, množina samotná je meniteľným objektom.
+~~~
+myset = {(10,10), 10, 20}
+print(myset)
+
+myset = {[10, 10], 10, 20}  #TypeError can't add a list
+
+myset = { {10, 10}, 10, 20} #TypeError can't add a set
+~~~
+Vo vyššie uvedenom príklade (10,10)je to n-tica, a preto sa stáva súčasťou sady. Ide však [10,10]o zoznam, preto sa zobrazí chybové hlásenie, že zoznam je nehašovateľný. ( [Hashovanie](https://en.wikipedia.org/wiki/Hash_function) je mechanizmus v informatike, ktorý umožňuje rýchlejšie vyhľadávanie objektov v pamäti počítača.)
+
+Pre množiny **neexistuje žiadná zvláštna syntax** ako to bolo v prípade zoznamov či n-tic, vytvárame ich jednoducho použitím globálnej funkcie set(), ku ktorej môžeme napr. použitím funkcie add() priložiť novú hodnotu, ktorá sa nachádza v jej parametri. To je príklad jednej z viacerých funkcii resp. metód ktoré môžeme použiť nad danou množinou:
 ~~~
 planety = set(("Země", "Mars", "Jupiter", "Saturn", "Uran", "Neptun"))
 print(planety)
@@ -34,48 +58,60 @@ Výsledok:
 {'Jupiter', 'Uran', 'Saturn', 'Mars', 'Neptun', 'Země', 'Pluto'}
 ~~~
 V príklade výššie sme vytvorili množinu šiestich mien planet. Dvojité zátvorky na riadku s funkciou set() znamenajú, že sme odovzdali názvy planet formou n-tice ako parameter tejto
-funkcie. Poradie položiek není zoradené podľa abecedy, a nezmení sa ani po pridaní novej položky. To ale neni židná chyba, lebo položky sú vnútorne udržované v poradí, čo pomahá množine efektivne určiť jedinečnosť každej položky.
+funkcie. Poradie položiek není zoradené podľa abecedy, a nezmení sa ani po pridaní novej položky. To ale nie je žiadná chyba, lebo položky sú evidované v danom poradí, čo nám pomáha na množine určiť pozíciu každej položky.
 
->**Množinu môžeme vytvoriť aj zo zoznamu.**
+>**Množinu môžeme vytvoriť aj zo zoznamu (list).**
 ~~~
 a_list = ['a', 'b', 'mpilgrim', True, False, 42]    # toto je zoznam, viete preco
-a_set = set(a_list)                           ①
-a_set                                         ②
 
-{'a', False, 'b', True, 'mpilgrim', 42}
+a_set = set(a_list)                           #      ①
+print(a_set)                                   
+{'a', False, 'b', True, 'mpilgrim', 42}       #      ②
 
-a_list                                        ③
-['a', 'b', 'mpilgrim', True, False, 42]
+print(a_list)                                  
+['a', 'b', 'mpilgrim', True, False, 42]       #      ③
 ~~~
 ①	K vytvoreniu množiny zo zoznamu sme použili funkciu set(). (Odborníci na Python vedia ako sú množiny implementované. Vedia teda že aj to že v skutočnosti nejde o volanie funkcie, ale o vytváranie tzv. inštancie triedy. Táto problematika spadá do vlastného OOP ktorou sa budeme zaoberať v ďalšom ročníku lebo teraz našu pozornosť sústreďujeme hlavne na základy Pythonu. Preto nám yzatiaľ bude stačit vedieť, že set() sa chová ako funkcia a že vracia množinu.)\
 ②	Ako sme sa už zmienili skôr, jedna množina môže obsahovať hodnoty ľubovolného datového typu. A tiež sme už spoznali, že množiny sú neusporiadané. Táto množina si nepamätuje pôvodné poradie prvkov v zozname, ktorý ból použitý k jej vytvoreniu. Ak by sme do množiny pridávali ďalšie prvky, nebude si množina pamätovať poradie, v akom ste ich vkladali.\
 ③	Pôvodný zoznam zostáva nezmenený.
 
+**Poznámka:** Hodnoty Truea 1sa v súboroch považujú za rovnakú hodnotu a zaobchádza sa s nimi ako s duplikátmi.
+
 >**Vytvorenie prázdnej množiny**
 
-Ak nemáme k dispozícii žiadne hodnoty (budú vytvorené resp. načítané podľa nejakého kritéria neskôr) nie je to žiadny problém. Môžeme totiž vytvoriť prázdnu množinu čím si vyčleníme (alokujeme) priestor a názov množiny pre neskoršiu aktualizáciu.
+Ak nemáme k dispozícii žiadne hodnoty (s tým že budú vytvorené resp. načítané podľa nejakého kritéria neskôr) nie je to žiadny problém. Môžeme totiž vytvoriť tzv. prázdnu množinu čím si vyčleníme (alokujeme) priestor a názov množiny pre neskoršiu aktualizáciu.
 ~~~
-a_set = set()    ①
-a_set            ②
-set()
-type(a_set)      ③
+a_set = set()          #  ①
+a_set                  #  ②
+print(set())
+# set()
 
+>>> type(a_set)        #  ③
 <class 'set'>
-len(a_set)       ④
-0
 
-not_sure = {}    ⑤
-type(not_sure)
+print(len(a_set))      #  ④
+# 0
 
+>>> not_sure = {}      #  ⑤
+>>> type(not_sure)
 <class 'dict'>
 ~~~
 ①	K vytvoreniu prázdnej množiny zavoláme set() bez argumentov.\
-②	Zobrazená reprezentácia prázdnej množiny vypadá trochu divne. Asi ste očakávali niečo ako {} . Týmto spôsobom sa ale vyjadruje prázdny slovník (dictionary) a nie množina. O slovníkoch se dozvieme v nasledujúcej časti.\
+②	Zobrazená reprezentácia prázdnej množiny vypadá trochu divne. Asi sme očakávali niečo ako { } . Týmto spôsobom sa ale vyjadruje prázdny slovník (dictionary) a nie množina. O slovníkoch se dozvieme v nasledujúcej časti.\
 ③	Navzdory podivnosti zobrazenej reprezentácie to skutočne je množina...\
 ④	...a táto množina neobsahuje žiadné prvky.\
-⑤	Prázdnu množinu nie je možné vytvoriť zápisom dvoch zložených zátvoriek kvôli histórii vývoja verzii (z Pythonu ver. 2). Týmto zpôsobom sa vyjadruje prázdny slovník a nie množina.
-# Operácie nad množinami (set-mi)
+⑤	Prázdnu množinu nie je možné vytvoriť zápisom dvoch zložených zátvoriek kvôli histórii vývoja verzii (z Pythonu ver. 2). Týmto spôsobom sa vyjadruje prázdny slovník a nie množina.
 >## Pridávanie hodnôt do množiny
+
+# Operácie nad množinami (set-mi)
+>## Zistenie počtu položiek množiny
+Ak chcete zistiť, koľko položiek má sada, použite len()funkciu.
+~~~
+thisset = {"apple", "banana", "cherry"}
+
+print(len(thisset))
+~~~
+
 Do existující množiny můžeme přidávat hodnoty dvěma různými způsoby: metodou add() a metodou update().
 ~~~
 >>> a_set = {1, 2}
@@ -138,29 +174,7 @@ KeyError: 21
 ③	Metoda remove() také přebírá hodnotu jediného argumentu a také odstraňuje hodnotu z množiny.\
 ④	Odlišnost se projeví v případě, kdy se zadaná hodnota v množině nenachází. V takovém případě metoda remove() vyvolá výjimku KeyError.
 
->### Použitie metódy pop()
-Na odstraňovanie prvkov z množiny, tak ako tomu bolo pri zoznamoch aj tu možno použiť funkciu či metódu pop().
-~~~
->>> a_set = {1, 3, 6, 10, 15, 21, 28, 36, 45}
->>> a_set.pop()                                ①
-1
->>> a_set.pop()
-3
->>> a_set.pop()
-36
->>> a_set
-{6, 10, 45, 15, 21, 28}
->>> a_set.clear()                              ②
->>> a_set
-set()
->>> a_set.pop()                                ③
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-KeyError: 'pop from an empty set'
-~~~
-①	Metoda pop() odstraní jeden prvek z množiny a vrátí jeho hodnotu. Ale množiny jsou neuspořádané a neexistuje u nich nic takového jako „poslední“ hodnota. Proto také neexistuje možnost ovlivnit, která hodnota bude odstraněna. Je to zcela náhodné.\
-②	Metoda clear() odstraní všechny prvky množiny a množina se stane prázdnou. Ve výsledku je to stejné jako provedení příkazu a_set = set(), který vytvoří novou prázdnou množinu a přepíše původní hodnotu proměnné a_set.\
-③	Pokus o volání metody pop() pro prázdnou množinu vede k vyvolání výjimky KeyError.
+
 
 Pokračovanie č. I
 

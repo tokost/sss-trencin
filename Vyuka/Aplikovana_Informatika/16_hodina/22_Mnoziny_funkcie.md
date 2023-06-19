@@ -1,7 +1,47 @@
 
 Pokračovanie č. I
 
-# Funkcie nad množinami (set-mi)
+Funkcia set() sa tiež používa na konverziu objektu typu reťazec, n-tica alebo slovník na objekt množiny, ako je znázornené nižšie.
+~~~
+s = set('Hello') # converts string to set
+print(s)
+{'l', 'H', 'o', 'e'}
+
+s = set((1,2,3,4,5)) # converts tuple to set
+print(s)
+{1, 2, 3, 4, 5}
+
+d = {1:'One', 2: 'Two'} 
+s = set(d)   # converts dict to set
+print(s) 
+{1, 2}
+~~~
+
+>### Použitie metódy pop()
+Na odstraňovanie prvkov z množiny, tak ako tomu bolo pri zoznamoch aj tu možno použiť funkciu či metódu pop().
+~~~
+>>> a_set = {1, 3, 6, 10, 15, 21, 28, 36, 45}
+>>> a_set.pop()                                ①
+1
+>>> a_set.pop()
+3
+>>> a_set.pop()
+36
+>>> a_set
+{6, 10, 45, 15, 21, 28}
+>>> a_set.clear()                              ②
+>>> a_set
+set()
+>>> a_set.pop()                                ③
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'pop from an empty set'
+~~~
+①	Metoda pop() odstraní jeden prvek z množiny a vrátí jeho hodnotu. Ale množiny jsou neuspořádané a neexistuje u nich nic takového jako „poslední“ hodnota. Proto také neexistuje možnost ovlivnit, která hodnota bude odstraněna. Je to zcela náhodné.\
+②	Metoda clear() odstraní všechny prvky množiny a množina se stane prázdnou. Ve výsledku je to stejné jako provedení příkazu a_set = set(), který vytvoří novou prázdnou množinu a přepíše původní hodnotu proměnné a_set.\
+③	Pokus o volání metody pop() pro prázdnou množinu vede k vyvolání výjimky KeyError.
+
+# Ďalšie funkcie nad množinami (set-mi)
 
 >## Bežné množinové funkcie (metódy)
 Pythonovský datový typ set podporuje niekoľko bežných množinových funkcii (metód) či operácií.
@@ -101,5 +141,38 @@ yes, it's true
 yes, it's true
 ~~~
 ①	Prázdná množina se v booleovském kontextu vyhodnocuje jako false.
-②	Libovolná množina s alespoň jedním prvkem se vyhodnocuje jako true.
-③	Libovolná množina s alespoň jedním prvkem se vyhodnocuje jako true. Hodnota prvků je nepodstatná.
+②	Ľubovolná množina s alespoň jedním prvkem se vyhodnocuje jako true.
+③	Ľubovolná množina s alespoň jedním prvkem se vyhodnocuje jako true. Hodnota prvků je nepodstatná.
+
+Nasledujúca tabuľka uvádza vstavané metódy funkcie nad množinou (set) s odkazom na príklady:
+
+| Metóda    | Popis                                                                     |
+|-----------|---------------------------------------------------------------------------|
+| [set.add()](https://www.tutorialsteacher.com/python/set-add) | Pridá prvok do set-u. Ak prvok už v množine existuje, nepridá tento prvok.
+|[set.clear()](https://www.tutorialsteacher.com/python/set-clear)| Odstráni všetky prvky zo set-u.
+|[set.copy()](https://www.tutorialsteacher.com/python/set-copy)|Vráti plytkú kópiu set-u t.j. skopírujú sa iba atribúty objektov. [Hlboká kópia predstavuje úplnú kópiu objektu.](https://sk.wiki-base.com/7779662-python-shallow-copy-and-deep-copy)
+|[set.difference()](https://www.tutorialsteacher.com/python/set-difference)|Vráti novú množinu s jedinečnými prvkami, ktoré nie sú v inej množine odovzdanej ako parameter.
+|[set.difference_update()](https://www.tutorialsteacher.com/python/set-difference-update)|Aktualizuje množinu, v ktorej sa metóda volá, prvkami, ktoré sú spoločné v inej množine odovzdané ako argument.
+|[set.discard()](https://www.tutorialsteacher.com/python/set-discard)| Odstráni konkrétny prvok zo sady.
+|[set.intersection()](https://www.tutorialsteacher.com/python/set-intersection)|Vráti novú množinu s prvkami, ktoré sú v daných množinách spoločné.
+|[set.intersection_update()](https://www.tutorialsteacher.com/python/set-intersection-update) | Aktualizuje množinu, na ktorej sa volá metóda instersection_update(), o spoločné prvky medzi špecifikovanými množinami.
+|[set.isdisjoint()](https://www.tutorialsteacher.com/python/set-isdisjoint)|Vráti hodnotu true, ak dané množiny nemajú žiadne spoločné prvky. Množiny sú disjunktné vtedy a len vtedy, ak je ich priesečník prázdna množina.
+|[set.issubset()](https://www.tutorialsteacher.com/python/set-issubset)|Vráti hodnotu true, ak množina (na ktorej sa volá issubset()) obsahuje každý prvok druhej množiny odovzdaný ako argument.
+|[set.pop()](https://www.tutorialsteacher.com/python/set-pop)|Odstráni a vráti náhodný prvok zo sady.
+|[set.remove()](https://www.tutorialsteacher.com/python/set-remove) | Odstráni zadaný prvok zo sady. Ak sa zadaný prvok nenašiel, vyhláste chybu.
+|[set.symmetric_difference()](https://www.tutorialsteacher.com/python/set-symmetric-difference)| Vráti novú množinu s odlišnými prvkami nachádzajúcimi sa v oboch množinách. 
+|[set.symmetric_difference_update()](https://www.tutorialsteacher.com/python/set-symmetric-difference-update) |Aktualizuje množinu, na ktorú sa volala metóda instersection_update(), o prvky, ktoré sú spoločné medzi špecifikovanými sadami.
+|[set.union()](https://www.tutorialsteacher.com/python/set-union)| Vráti novú množinu s odlišnými prvkami zo všetkých daných množín.
+|[set.update()](https://www.tutorialsteacher.com/python/set-update)|Aktualizuje množinu pridaním odlišných prvkov z odovzdanej jednej alebo viacerých iterovateľných položiek.
+
+>### Operácie vs. vstavané funkcie
+Ako už bolo spomenuté, dátový typ množiny v Pythone sa implementuje ako množina definovaná v matematike. Preto je aj tu možné vykonávať rôzne známe operácie. Operátory |, &, - a ^ vykonávajú operácie zjednotenia, prieniku, rozdielu a symetrického rozdielu. Každý z týchto operátorov má zodpovedajúcu metódu spojenú so vstavanou triedou množín.
+	
+| Operácie nad set-mi                                                                                                                                                | Príklady                                                                                                                                                                                                                                                                                                                   |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|**Zjednotenie** : Vráti novú množinu s prvkami z oboch množín.<br><br>**Operátor** :<br>**Metóda** : [set.union()](https://www-tutorialsteacher-com.translate.goog/python/set-union?_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)                                                                     | s1={1,2,3,4,5}<br>s2={4,5,6,7,8}<br>s1 s2 #{1, 2, 3, 4, 5, 6, 7, 8}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)<br><br>s1={1,2,3,4,5}<br>s2={4,5,6,7,8}<br>s1.union(s2) #{1, 2, 3, 4, 5, 6, 7, 8}<br>s2.union(s1) #{1, 2, 3, 4, 5, 6, 7, 8}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)                                                                                                              |
+| **Prienik** : Vráti novú množinu obsahujúcu prvky spoločné pre obe množiny.<br><br>**Operátor**: &<br>**Metóda**: [set.intersection()](https://www-tutorialsteacher-com.translate.goog/python/set-intersection?_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)                                       | s1={1,2,3,4,5} <br>s2={4,5,6,7,8} <br>s1&s2 #{4, 5}                       <br>s2&s1 #{4, 5}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)<br><br>s1={1,2,3,4,5}           <br>s2={4,5,6,7,8}           <br>s1.intersection(s2) #{4, 5}                                <br>s2.intersection(s1) #{4, 5}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)                                                      |
+| **Rozdiel**: Vráti množinu obsahujúcu prvky iba v prvej množine, ale nie v druhej množine.<br><br>**Operátor** : -<br>**Metóda**: [set.difference()](https://www-tutorialsteacher-com.translate.goog/python/set-difference?_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)                             | s1={1,2,3,4,5} <br>s2={4,5,6,7,8} <br>s1-s2 #{1, 2, 3}                    <br>s2-s1 #{8, 6, 7}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)<br><br>s1={1,2,3,4,5}      <br>s2={4,5,6,7,8}      <br>s1.rozdiel(s2) #{1, 2, 3}                        <br>s2.rozdiel(s1) #{8, 6, 7}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)                                                                         |
+| **Symetrický rozdiel**: Vráti množinu pozostávajúcu z prvkov v oboch množinách, s výnimkou spoločných prvkov.<br><br>**Operátor**: ^<br>Metóda: [set.symmetric_difference()](https://www-tutorialsteacher-com.translate.goog/python/set-symmetric-difference?_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp) | s1={1,2,3,4,5} <br>s2={4,5,6,7,8} <br>s1^s2 #{1, 2, 3, 6, 7, 8}           <br>s2^s1 #{1, 2, 3, 6, 7, 8}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)<br><br>s1={1,2,3,4,5}               <br>s2={4,5,6,7,8}               <br>s1.symmetric_difference(s2) #{1, 2, 3, 6, 7, 8}                        <br>s2.symmetric_difference( s1) #{1, 2, 3, 6, 7, 8}<br>[Kód](https://www-tutorialsteacher-com.translate.goog/codeeditor?cid=python-3z7undc5a&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp) |
+	
+	

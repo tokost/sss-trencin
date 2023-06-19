@@ -1,7 +1,4 @@
-Príklad S.1Vytvorte funkciu, ktorá odstráni všetky opakujúce sa hodnoty zo zoznamu (poľa).Elegantným riešením je „pretypovanie“ list-u (zoznamu) na set (množinu), vktorej sú automaticky odstránené duplicitné hodnoty anásledne „pretypovanie“ späť na typ zoznam.import poledef odstranOpakujuceSaPrvky(pole):pom = set(pole)pole = list(pom)return pole# jediným príkazom funkcieodstran...:return list(set(pole))Použitie:poleInt = pole.vytvorIntNahodne()poleInt = odstranOpakujuceSaPrvky(poleInt)pole.vypis(poleInt, "Pole bez opakujúcich sa hodnôt:")Výpis:Počet prvkov poľa: 13Prvky poľa:[1, 1, 5, 6, 5, 8, 1, 8, 6, 8, 5, 1, 8]Pole bez opakujúcich sa hodnôt:[8, 1, 5, 6]
-Python -študijný text7Použitie bez definovania funkcie odstranOpakujuceSaPrvky():poleInt = pole.vytvorIntNahodne()poleInt = list(set(poleInt))pole.vypis(poleInt, "Pole bez opakujúcich sa hodnôt:")
-
-Množiny - set
+Množiny (set) - vytváranie vlastných funkcii
 
 Napíš funkciu mnozina1(n), ktorá vráti množinu všetkých čísel z intervalu <0, n>, ktoré sú deliteľné 3 a súčasne ich zvyšok po delení 5 je 1 alebo 2. Vo funkcii nepouži žiaden cyklus, len množinové operácie a funkciu range. Napríklad:
 
@@ -108,4 +105,18 @@ k
      (1, 'c'), (1, 'a'), (3, 'a'), (2, 'c'), (2, 'b')}
 Uvedom si, že výsledná množina môže obsahovať tieto dvojice v ľubovoľnom inom poradí.
 
-[Príklady z Geeksforgeeks] (https://www-geeksforgeeks-org.translate.goog/python-sets/?_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)
+[Príklady z w3](https://www-w3schools-com.translate.goog/python/python_sets.asp?_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp) 
+
+
+Príklad
+Truea 1považuje sa za rovnakú hodnotu:
+
+thisset = {"apple", "banana", "cherry", True, 1, 2}
+
+print(thisset)
+
+[Riešenie](https://www-w3schools-com.translate.goog/python/trypython.asp?filename=demo_sets_duplicate_true&_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)
+
+[Príklady z Geeksforgeeks](https://www-geeksforgeeks-org.translate.goog/python-sets/?_x_tr_sl=en&_x_tr_tl=sk&_x_tr_hl=sk&_x_tr_pto=wapp)
+
+[Ďalšie príklady s funkciami](https://www.programiz.com/python-programming/set)
