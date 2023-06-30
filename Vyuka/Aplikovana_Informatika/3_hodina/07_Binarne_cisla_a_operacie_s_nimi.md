@@ -167,4 +167,36 @@ https://www.gpnr.sk/obsah/predmety/subory/informatika/K%C3%B3dovanie_r%C3%B4znyc
 https://winpcguide.ru/sk/computer-literacy/the-formats-of-graphic-files-are-formats-of-storage-of-graphic-data/ 
 
 
+>## Logické operácie
+Pozrime sa podrobnejšie na logické operácie and, or a not. Tieto operácie samozrejme fungujú pre logické hodnoty True a False.
+
+Logický súčin a súčasne:
+
+A	B	A and B
+False	False	False
+True	False	False
+False	True	False
+True	True	True
+Logický súčet alebo:
+
+A	B	A or B
+False	False	False
+True	False	True
+False	True	True
+True	True	True
+
+Negácia:
+
+A	not A
+False	True
+True	False
+
+Logické operácie fungujú nielen pre logický typ ale aj pre skoro všetky ďalšie typy. V tomto prípade Python pre každý typ definuje prípady, ktoré sa chápu ako False a tým je aj určené, že všetky ďalšie hodnoty tohto typu sa chápu ako True. Ukážme prípady pre doteraz známe typy, ktoré označujú logickú hodnotu False:
+
+typ	False	True
+int	x == 0	x != 0
+float	x == 0.0	x != 0.0
+str	x == ''	x != ''
+
+
 

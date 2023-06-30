@@ -1,0 +1,1 @@
+Patria sem zásobnníky a fronty. Implementujú sa pomocou základných dátový štruktúr t.j. kolekcii ku ktorým patria zoznamy (list), n-tice (tuple), množiny (set) a slovníky (dictionary).

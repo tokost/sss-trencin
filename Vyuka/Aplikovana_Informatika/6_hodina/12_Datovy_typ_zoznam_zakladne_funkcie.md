@@ -1,3 +1,6 @@
+># Dátové kolekcie
+
+
 # Dátový typ zoznam (list) 
 
 predstavuje súpis položiek ktorým hovoríme **prvky** a ktoré sú zostavené podľa určitého hľadiska (napr. tematického). Zoznam sa môže skladať z prvkov ktoré rôzneho dátového typu a tieto môžu byt usporiadané abecedne alebo systematicky napr. od najväčšieho po najmenšieho a pod. 
